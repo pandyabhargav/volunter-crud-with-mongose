@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+
+  <title>Volunteer Application Form</title>
+</head>
+<body>
+ 
+  <div class="ctrlqFormContentWrapper">
+    <div class="ctrlqHeaderMast"></div>
+    <div class="ctrlqCenteredContent">
+      <div class="ctrlqFormCard">
+        <div class="ctrlqAccent"></div>
+        <div class="ctrlqFormContent">
+          <form method="post" action="/updateTodo/<%= singleTodo.id %>">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="name" name="name" type="text" value="<%= singleTodo.name %>" class="validate" required>
+                <label for="name">Full Name</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" name="email" type="email" value="<%= singleTodo.email %>" class="validate" required>
+                <label for="email">Email Address</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="phone" name="phone" type="tel" value="<%= singleTodo.phone %>" class="validate" required>
+                <label for="phone">Phone Number</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <select id="availability" name="availability" class="validate" required>
+                  <option value="" disabled>Select Your Availability</option>
+                  <option value="Weekdays" <%= singleTodo.availability === 'Weekdays' ? 'selected' : '' %>>Weekdays</option>
+                  <option value="Weekends" <%= singleTodo.availability === 'Weekends' ? 'selected' : '' %>>Weekends</option>
+                  <option value="Evenings" <%= singleTodo.availability === 'Evenings' ? 'selected' : '' %>>Evenings</option>
+                </select>
+                <label for="availability">Availability</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <p>Areas of Interest</p>
+                <p>
+                  <input type="checkbox" name="interest" id="interest_education" value="Education" <%= singleTodo.interests.includes('Education') ? 'checked' : '' %>>
+                  <label for="interest_education">Education</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="interest" id="interest_health" value="Health" <%= singleTodo.interests.includes('Health') ? 'checked' : '' %>>
+                  <label for="interest_health">Health</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="interest" id="interest_environment" value="Environment" <%= singleTodo.interests.includes('Environment') ? 'checked' : '' %>>
+                  <label for="interest_environment">Environment</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="interest" id="interest_community" value="Community Service" <%= singleTodo.interests.includes('Community Service') ? 'checked' : '' %>>
+                  <label for="interest_community">Community Service</label>
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="experience" name="experience" class="materialize-textarea" required><%= singleTodo.experience %></textarea>
+                <label for="experience">Relevant Experience</label>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col m6 s12">
+                <button type="submit" class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $('select').material_select(); // Initialize Materialize select
+    });
+  </script>
+</body>
+</html>

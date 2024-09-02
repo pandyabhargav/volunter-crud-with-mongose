@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>View Selected Volunteers</title>
+</head>
+<body>
+  <div class="container">
+    <h4>Selected Volunteer Information</h4>
+    <div class="divider"></div>
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email Address</th>
+          <th>Phone Number</th>
+          <th>Availability</th>
+          <th>Areas of Interest</th>
+          <th>Relevant Experience</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% todos.forEach(todo => { %>
+        <tr>
+          <td><%= todo.name %></td>
+          <td><%= todo.email %></td>
+          <td><%= todo.phone %></td>
+          <td><%= todo.availability %></td>
+          <td><%= todo.interests.join(', ') %></td>
+          <td><%= todo.experience %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/" class="btn waves-effect waves-light">Back to List</a>
+  </div>
+</body>
+</html>

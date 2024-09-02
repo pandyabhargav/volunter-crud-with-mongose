@@ -1,0 +1,261 @@
+
+body {
+    background-color: #e0f2f1;
+  }
+  .red{
+    background-color: red;
+  }
+  form p {
+    font-size: 120%;
+  }
+  
+  .ctrlqHeaderMast {
+    height: 278px;
+    background: #009688;
+  }
+  
+  .ctrlqFormContent {
+    color: rgba(0,0,0,.87);
+    padding: 20px 35px
+  }
+  
+  .ctrlqFormContentWrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column
+  }
+  
+  .ctrlqAccent {
+    background-color: #a7ffeb;
+    height: 8px;
+  }
+  .ctrlqCenteredContent {
+    margin: auto;
+    width: 600px; 
+  }
+  .ctrlqFormCard {
+    background-color: #fff;
+    margin-bottom: 48px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    word-wrap: break-word
+  }
+  
+  .ctrlqFormCard:first-of-type {
+    margin-top: -100px
+  }
+  
+  .ctrlqHeaderTitle {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 34px;
+    line-height: 135%;
+    max-width: 100%;
+    min-width: 0%;
+    margin-bottom: 22px
+  }
+  
+  @media (max-width: 660px) {
+    .ctrlqHeaderMast {
+      height: 122px;
+    }
+    .ctrlqFormCard:first-of-type {
+      margin-top: -50px;
+    }
+  
+    .ctrlqCenteredContent {
+      width: 90%;
+    }
+  }
+  
+  div.error {
+    position: relative;
+    top: -1rem;
+    left: 0rem;
+    font-size: 0.8rem;
+    color: #FF4081;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+
+
+
+
+  /* style.css */
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  color: #555;
+  font-weight: bold;
+}
+
+td {
+  color: #555;
+}
+
+/* Highlight Table Row */
+table.highlight tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+}
+
+/* Button Styles */
+.btn {
+  background-color: #1e88e5;
+  text-transform: none;
+  margin-left: 5px;
+}
+
+.btn:hover {
+  background-color: #1565c0;
+}
+
+/* Fixed Action Button */
+.fixed-action-btn .btn-floating {
+  background-color: #e53935;
+}
+
+.fixed-action-btn .btn-floating:hover {
+  background-color: #c62828;
+}
+
+
+
+
+
+
+
+
+
+
+/* viwe css */
+
+.container {
+  margin-top: 50px;
+}
+
+/* Section Headers */
+h4, h5 {
+  color: #2c3e50;
+}
+
+/* Collection Styles */
+.collection .collection-item {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.collection .collection-item strong {
+  color: #1e88e5;
+}
+
+/* Experience Paragraph */
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Resume Button */
+.btn {
+  background-color: #1e88e5;
+  text-transform: none;
+}
+
+.btn:hover {
+  background-color: #1565c0;
+}
+
+/* Fixed Action Button */
+.fixed-action-btn .btn-floating {
+  background-color: #e53935;
+}
+
+.fixed-action-btn .btn-floating:hover {
+  background-color: #c62828;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  height: 2px;
+  background-color: #e0e0e0;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 600px) {
+  .container {
+    margin-top: 30px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p, .collection .collection-item {
+    font-size: 14px;
+  }
+}
+
+
